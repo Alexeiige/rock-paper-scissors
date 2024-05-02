@@ -8,8 +8,17 @@
     <body>
     <script>
     //Define computerChoice function 
+    function getComputerchoice()
+    {
+        var computerChoices = ["rock", "paper", "scissors"];
+        var randChoices = Math.floor(Math.random() * 3);
+        console.log(computerChoices);
+        return computerChoice [randChoices];
+    }
     //Define playerChoice function
-    //playGame function: Will lop the playRound function five times and return a overall winner or loser at the end
+
+
+    //playGame function: Will loop the playRound function five times and return a overall winner or loser at the end
         //playRound(playSelection, computerSelection)
         //ComputerChoice function: Will generate a random string of either rock, paper, or scissors. 
         //get playSelection function: User will be prompted in the browser to enter either rock, paper, or scissors (not cas-sensitive)
@@ -21,3 +30,4 @@
     </script>
     </body>
 </html>
+
