@@ -8,7 +8,7 @@
     <body>
     <script>
         //Define computerChoice function 
-        function computerChoice()
+        function getComputerChoice()
     {
         var computerChoices = ["rock", "paper", "scissors"];
         var randChoices = Math.floor(Math.random() * 3);
@@ -17,10 +17,10 @@
     }
 
         //Define playerChoice function
-        function playerChoice()
+        function getHumanChoice()
         {
             var userInput = prompt("Please choose rock, paper or scissors.");
-                if (userInput === "paper" || userInput === "rock" || userInput === "scissors")
+                if (userInput.toLowerCase() === "paper" || userInput.toLowerCase() === "rock" || userInput.toLowerCase() === "scissors")
                 {
                     console.log ("You chose "+userInput);
                 }
@@ -29,7 +29,7 @@
                     console.log("Error, please try again");
                     }   
         }
-        playerChoice ();
+        getHumanChoice();
 
     //playGame function: Will loop the playRound function five times and return a overall winner or loser at the end
         //playRound(playSelection, computerSelection)
