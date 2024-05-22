@@ -22,55 +22,55 @@
         return computerChoice [randChoices];
     }
 
-    //playGame function: Will loop the playRound function five times and return a overall winner or loser at the end
-    function playGame(playerChoice, computerChoice)
+    //playRound function: loops playRound 5 times and prints winner of each round.
+    for (let i = 0; i < 5; i++)
     {
-        for (let i = 0; i < 4; i++)
+    function playRound(playerChoice, computerChoice)   
         {
         //Rock choice 
-        if (playerChoice == "rock" && computerChoice == "scissors")
-        {
-          return "You win! Rock beats scissors!";
-        }
-        else if (playerChoice == "rock" && computerChoice == "paper")
-        {
-            return "You lose! Paper beats scissors!";
-        }
-        else if (playerChoice == "rock" && computerChoice == "rock")
-        {
-            return "It's a tie! You both chose rock."
-        }
+            if (playerChoice == "rock" && computerChoice == "scissors")
+            {
+            return "You win! Rock beats scissors!";
+            }
+
+             else if (playerChoice == "rock" && computerChoice == "paper")
+            {
+                return "You lose! Paper beats scissors!";
+            }
+            else if (playerChoice == "rock" && computerChoice == "rock")
+            {
+                return "It's a tie! You both chose rock."
+            }
         //Paper choice
-        else if (playerChoice == "paper" && computerChoice == "rock")
-        {
-            return "You win! Paper beats rock";
-        }
-        else if (playerChoice == "paper" && computerChoice == "scissors")
-        {
-            return "You lose! Scissors beats paper";
-        }
-        else if (playerChoice == "paper" && computerChoice == "paper")
-        {
-            return "It's a tie! You both chose rock.";
-        }
+            else if (playerChoice == "paper" && computerChoice == "rock")
+            {
+                return "You win! Paper beats rock";
+            }
+            else if (playerChoice == "paper" && computerChoice == "scissors")
+            {
+                return "You lose! Scissors beats paper";
+            }
+            else if (playerChoice == "paper" && computerChoice == "paper")
+            {
+                return "It's a tie! You both chose rock.";
+            }
         //Scissors choice
-        else if (playerChoice == "scissors" && computerChoice == "paper")
-        {
-        return "You win! Scissors beats paper";
-        }
-        else if (playerChoice == "scissors" && computerChoice == "rock")
-        return "You lose! Scissors beats rock";
+            else if (playerChoice == "scissors" && computerChoice == "paper")
+            {
+            return "You win! Scissors beats paper";
+            }
+            else if (playerChoice == "scissors" && computerChoice == "rock")
+            return "You lose! Scissors beats rock";
         
-        else if (playerChoice == "scissors" && computerChoice == "scissors")
-        {
-        return "It's a tie! You both chose scissors";
+            else if (playerChoice == "scissors" && computerChoice == "scissors")
+            {
+            return "It's a tie! You both chose scissors";
+            }
         }
+    console.log (playRound(playerChoice(), computerChoice()))
     }
-}
-    console.log (playGame(playerChoice(), computerChoice()))
-    //return the result of playRound once
-    //Return overall winner once playRound has played five times. 
-    </script>
+//Plays playRound 5 times
+        </script>
     </body>
 </html>
 
