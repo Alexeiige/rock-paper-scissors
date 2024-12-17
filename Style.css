@@ -1,0 +1,14 @@
+:root {
+
+     /*Establishes all the main colours */
+    --border-colour: #1c658e;
+    --green-fill: #5a9e7b;
+    --primary-colour: #fff; 
+
+    /*overall font size*/
+    --root-font-size: 16px;
+    font-size: var(--root-font-size);
+
+    /*font families*/
+    --font-family: "Montserrat", sans-serif;
+}
