@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel = "stylesheet" href="style.css">
+    <title>TOP: Rock Paper Scissors Project — Pokemon version</title>
 </head>
     <body>
+    <main class ="game-container">
+        <div class = "header">
+            <p class = "round-result">Rock Paper Scissors - Pokemon Edition!</p>
+        </div>
+        <div class="battle-field">
+            <div class="choices-container">
+              <div class="left">
+                <div class="player-choice stage">
+                  <img src="assets/images/stage.svg" alt="" class="grass-stage" />
+                </div>
+                <p class="player-score">Player :</p>
+                </div>
+
+    <div> class = "centre"
+    <p class = "versus">VS</p>
+    </div>
+
+    <div class = "right">
+        <div class = "computer-choice stage"/>
+        <img src="assets/images/stage.svg" alt="" class="grass-stage" />
+    </div>
+
+    <div class = "final-result-container hidden">
+        <p class = "final-result-text"></p>
+        <button class = "play-again hidden">Play Again</button>
+        </div>
+    </div>
+            <div class = "player-buttons">
+                <section class = "choices">
+                    <button class = "buttons" id = "water">Squirtle</button>
+                    <button class = "buttons" id = "grass">Bulbasaur</button>
+                    <button class = "buttons" id = "fire">Charmander</button>
+                </section>
+                </div>
+            </main>
+        <script src = "assets/js/script.js"></script>
+    </body>
+</html>
+
+
+
     <script>
     let playerScore = 0;
     let computerScore = 0;
