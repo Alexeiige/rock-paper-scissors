@@ -3,74 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TOP: Rock Paper Scissors Project — Pokemon version</title>
 </head>
-    <body>
-    <script>
-    //Define playerChoice function
-    function playerChoice()
-        {
-        const playerChoice = prompt("Please choose rock, paper or scissors.").toLowerCase();
-        return playerChoice
-        }
-
-        //Define computerChoice function 
-    function computerChoice()
-    {
-        var computerChoice = ["rock", "paper", "scissors"];
-        var randChoices = Math.floor(Math.random() * 3);
-        return computerChoice [randChoices];
-    }
-
-    //playGame function: Will loop the playRound function five times and return a overall winner or loser at the end
-    function playGame(playerChoice, computerChoice)
-    {
-        for (let i = 0; i < 4; i++)
-        {
-        //Rock choice 
-        if (playerChoice == "rock" && computerChoice == "scissors")
-        {
-          return "You win! Rock beats scissors!";
-        }
-        else if (playerChoice == "rock" && computerChoice == "paper")
-        {
-            return "You lose! Paper beats scissors!";
-        }
-        else if (playerChoice == "rock" && computerChoice == "rock")
-        {
-            return "It's a tie! You both chose rock."
-        }
-        //Paper choice
-        else if (playerChoice == "paper" && computerChoice == "rock")
-        {
-            return "You win! Paper beats rock";
-        }
-        else if (playerChoice == "paper" && computerChoice == "scissors")
-        {
-            return "You lose! Scissors beats paper";
-        }
-        else if (playerChoice == "paper" && computerChoice == "paper")
-        {
-            return "It's a tie! You both chose rock.";
-        }
-        //Scissors choice
-        else if (playerChoice == "scissors" && computerChoice == "paper")
-        {
-        return "You win! Scissors beats paper";
-        }
-        else if (playerChoice == "scissors" && computerChoice == "rock")
-        return "You lose! Scissors beats rock";
+<body>
+    <main class="game-container">
+        <div class="header">
+            <p class="round-result"> Rock Paper Scissors — Pokemon Edition</p>
+        </div>
+            <div class="battlefield">
+                <div class="choices-container">
+                    <div class="left">
+                        <div class="=player-choice-stage">
+                            <img src="assets/images/stage.svg" alt="" class="grass-stage"/>
+            </div>
         
-        else if (playerChoice == "scissors" && computerChoice == "scissors")
-        {
-        return "It's a tie! You both chose scissors";
-        }
-    }
-}
-    console.log (playGame(playerChoice(), computerChoice()))
-    //return the result of playRound once
-    //Return overall winner once playRound has played five times. 
-    </script>
-    </body>
+        </div>
+    </main>
+</body>
 </html>
-
