@@ -1,0 +1,56 @@
+:root {
+
+     /*Establishes all the main colours */
+    --border-colour: #1c658e;
+    --green-fill: #5a9e7b;
+    --primary-colour: #fff; 
+
+    /*overall font size*/
+    --root-font-size: 16px;
+    font-size: var(--root-font-size);
+
+    /*font families*/
+    --font-family: "Montserrat", sans-serif;
+}
+
+/*box-size model*/
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+/*remove margin*/
+*
+{
+    margin: 0;
+}
+
+body 
+{
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased; 
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;}
+
+/*Remove default typography styles and replace*/
+input, 
+button, 
+textarea, 
+select {
+    font: inherit;
+}
+
+@font-face
+{
+    font-family: "Montserrat";
+    src: url("assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
