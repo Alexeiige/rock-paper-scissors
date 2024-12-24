@@ -87,6 +87,9 @@ body
     align-items: center;
     justify-content: center;
 }
+
+   
+/*Formatted the rock-paper-scissors heading.*/ 
     .game-container
     {
     width: 100%;
@@ -115,6 +118,74 @@ body
         margin: 0;
     }
 
+   /*Formatted the rock-paper-scissors text (not on the buttons).*/  
     .choices-container
+    {
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-evenly;
+
+        color: var (var(--primary-colour));
+        text-shadow: -2px -2px 0 var (var(--border-colour), 2px -2px 0 var(--border-colour)),
+        -2px 2px 0 var(--border-color), 2px 2px 0 var(--border-color),
+        -2px 0 0 var(--border-color), 2px 0 0 var(--border-color),
+        0 -2px 0 var(--border-color), 0 2px 0 var(--border-color);
+        letter-spacing: 2px;
+        font-weight: 700;
+    }
+
+    .left,
+    .center,
+    .right
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     
+.pokemon-choice
+{
+    position: relative;
+    width: 150px;
+    top: 50px;
+}
+
+.computer-choice .pokemon-choice
+{
+    transform: scaleX(-1);
+}
+
+.stage
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.player-score,
+.computer-choice
+{
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+
+.versus
+{
+    font-size: 2rem;
+}
+
+.final-result-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+}
+
+.final-result-text
+
 
