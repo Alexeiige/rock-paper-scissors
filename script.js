@@ -3,10 +3,10 @@ const header = document.querySelector(".header");
 const roundResult = document.querySelector(".round-result");
 
 const choicesContainer = document.querySelector(".choices-container");
-const playerStage = document.querySelector (".player-choice.stage");
+const playerStage = document.querySelector (".player-choice-stage");
 const playerScoreContainer = document.querySelector(".player-score");
 
-const computerStage = document.querySelector(".computer-choice.stage");
+const computerStage = document.querySelector(".computer-choice-stage");
 const computerScoreContainer = document.querySelector(".computer-score");
 
 const playerButtons = document.querySelector(".player-buttons");
