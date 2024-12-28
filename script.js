@@ -93,5 +93,3 @@ buttonSection.onclick = (event) =>
         announceWinner();
     }
 };
-
-const
