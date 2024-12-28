@@ -1,3 +1,4 @@
+//Added JS to target specific html sections of the game.// 
 const header = document.querySelector(".header");
 const roundResult = document.querySelector(".round-result");
 
