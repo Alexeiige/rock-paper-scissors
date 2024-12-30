@@ -12,7 +12,7 @@ const computerScoreContainer = document.querySelector(".computer-score");
 const playerButtons = document.querySelector(".player-buttons");
 const buttonSection = document.querySelector(".choices");
 
-const finalResultContainer = document.querySelector(".final-result-container-hidden");
+const finalResultContainer = document.querySelector(".final-result-container");
 
 const finalResultText = document.querySelector(".final-result-text");
 const playAgain = document.querySelector(".play-again");
