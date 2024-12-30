@@ -12,7 +12,7 @@ const computerScoreContainer = document.querySelector(".computer-score");
 const playerButtons = document.querySelector(".player-buttons");
 const buttonSection = document.querySelector(".choices");
 
-const finalResultContainer = document.querySelector(".final-result-container");
+const finalResultContainer = document.querySelector(".final-result-container-hidden");
 
 const finalResultText = document.querySelector(".final-result-text");
 const playAgain = document.querySelector(".play-again");
@@ -71,14 +71,14 @@ const getComputerChoice = () =>
 //Winner is calculated. 
 const announceWinner = () =>
 {
-    finalResultContainer.classList.remove('hidden');
-    buttonSection.classList.add('hidden');
-    playAgain.classList.remove('hidden'); // Ensure Play Again is visible
+    toggleElements();
 
     const result = humanScore === 5 ? "won" : "lose";
     const bgColour = humanScore === 5 ? "#2e4595" : "#f47932";
-    finalResultContainer.style.backgroundColor = bgColour;
+    finalResultContainer.style.backgroundColor =bgColour;
     finalResultText.textContent = `You ${result}! ${humanScore}-${computerScore}`;
+    playAgain.classList.remove('hidden');
+    buttonSection.classList.add('hidden');
 };
 
 //Allows player choice input, computer random choice, stage updates as game processes and round processing.
@@ -115,6 +115,7 @@ buttonSection.onclick = (event) =>
 };
 
 playAgain.onclick = () => {
+    // Reset game state
     humanScore = 0;
     computerScore = 0;
 
@@ -124,7 +125,7 @@ playAgain.onclick = () => {
     computerScoreContainer.textContent = `Computer: ${computerScore}`;
     playerScoreContainer.textContent = `Player: ${humanScore}`;
 
-    // Ensure visibility is reset
+    // Ensure visibility is correctly set
     finalResultContainer.classList.add('hidden'); 
     buttonSection.classList.remove('hidden');   
     playAgain.classList.add('hidden');     
