@@ -12,9 +12,24 @@ const computerScoreContainer = document.querySelector(".computer-score");
 const playerButtons = document.querySelector(".player-buttons");
 const buttonSection = document.querySelector(".choices");
 
-const finalResultContainer = document.querySelector(".final-result-container");
+const finalResultContainer = document.querySelector(".final-result-container-hidden");
+
 const finalResultText = document.querySelector(".final-result-text");
 const playAgain = document.querySelector(".play-again");
+
+const toggleElements = () => {
+    if (finalResultContainer && buttonSection && playAgain) {
+        finalResultContainer.classList.toggle('hidden');
+        buttonSection.classList.toggle('hidden');
+        playAgain.classList.toggle('hidden');
+    } else {
+        console.error('One or more elements in toggleElements are null:', {
+            finalResultContainer,
+            buttonSection,
+            playAgain
+        });
+    }
+};
 
 let humanScore = 0;
 let computerScore = 0;
@@ -104,7 +119,7 @@ buttonSection.onclick = (event) =>
     }
 };
 
-playAgain.onclick = () => 
+playAgain.onclick = () =>
 {
     toggleElements();
     humanScore = 0;
