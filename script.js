@@ -13,8 +13,16 @@ const playerButtons = document.querySelector(".player-buttons");
 const buttonSection = document.querySelector(".choices");
 
 const finalResultContainer = document.querySelector(".final-result-container");
+
 const finalResultText = document.querySelector(".final-result-text");
 const playAgain = document.querySelector(".play-again");
+
+const toggleElements = () =>
+    {
+        finalResultContainer.classList.toggle('hidden');
+        buttonSection.classList.toggle('hidden');
+        playAgain.classList.toggle('hidden');
+    };
 
 let humanScore = 0;
 let computerScore = 0;
@@ -63,11 +71,13 @@ const getComputerChoice = () =>
 //Winner is calculated. 
 const announceWinner = () =>
 {
-    toggleElements();
+    finalResultContainer.classList.remove('hidden');
+    buttonSection.classList.add('hidden');
+    playAgain.classList.remove('hidden'); // Ensure Play Again is visible
 
     const result = humanScore === 5 ? "won" : "lose";
     const bgColour = humanScore === 5 ? "#2e4595" : "#f47932";
-    finalResultContainer.style.backgroundColor =bgColour;
+    finalResultContainer.style.backgroundColor = bgColour;
     finalResultText.textContent = `You ${result}! ${humanScore}-${computerScore}`;
 };
 
@@ -104,13 +114,18 @@ buttonSection.onclick = (event) =>
     }
 };
 
-playAgain.onclick = () => 
-{
-    toggleElements();
+playAgain.onclick = () => {
     humanScore = 0;
     computerScore = 0;
+
+    // Reset game text and styles
     roundResult.textContent = "Rock Paper Scissors — Pokemon Edition!";
     header.style.backgroundColor = "#5a9e7b";
     computerScoreContainer.textContent = `Computer: ${computerScore}`;
     playerScoreContainer.textContent = `Player: ${humanScore}`;
-};
+
+    // Ensure visibility is reset
+    finalResultContainer.classList.add('hidden'); 
+    buttonSection.classList.remove('hidden');   
+    playAgain.classList.add('hidden');     
+}
